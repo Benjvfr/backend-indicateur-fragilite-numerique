@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  db:
+    container_name: postgres-indicateur-fragilite-numerique
+    image: postgres:13.0-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: postgres
+      POSTGRES_DB: indicateur-fragilite-numerique
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  pgadmin:
+    container_name: pgadmin-indicateur-fragilite-numerique
+    image: dpage/pgadmin4:4.27
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pgadmin4@pgadmin.org"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - 8888:80
