@@ -8,6 +8,7 @@
 # Then, build the image with:
 #
 # docker build -f src/main/docker/Dockerfile.jvm -t quarkus/indice-numerique-jvm .
+# docker build -f src/main/docker/Dockerfile.jvm -t benjv/ifn-backend:v0.1 .
 #
 # Then run the container using:
 #

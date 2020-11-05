@@ -14,10 +14,12 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 public class IndicateurNumeriqueController {
 
+    /*
     @GET
     public List<IndicateurNumerique> list() {
         return IndicateurNumerique.listAll(Sort.by("nomCommune"));
     }
+    */
 
     @GET
     @Path("commune")
