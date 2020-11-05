@@ -46,12 +46,13 @@ newdf['Points de la part des familles monoparentales / commune'] = (((newdf['Par
 newdf['Somme des points'] = newdf['Points de la part des ménages d’une personne / commune'] + newdf['Points de la part des familles monoparentales / commune']
 
 # Score de fragilité sur l'accès à l'information
-newdf['score_acces_information_iris'] = (newdf['Somme des points']*100)/(2*100)
+newdf['score_acces_information_region'] = (newdf['Somme des points']*100)/(2*100)
 
 dftoexport = pd.DataFrame()
 dftoexport['nom_iris'] = newdf['LIBIRIS']
 dftoexport['nom_commune'] = newdf['LIBCOM']
 dftoexport['numero_region'] = newdf['REG']
-dftoexport['score_acces_information_iris'] = newdf['score_acces_information_iris']
+dftoexport['score_acces_information_region'] = newdf['score_acces_information_region']
 
-dftoexport.to_csv(r'xls/export.csv', sep=';')
+
+dftoexport.to_csv(r'xls/score_acces_information_region.csv', sep=';')
